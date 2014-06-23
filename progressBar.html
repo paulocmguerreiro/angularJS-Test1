@@ -1,0 +1,7 @@
+<div ng-show="value >0 && value <= 100">
+    <div style="display:inline-block; width:{{value}}px;    background-color: {{bar1color}}">&nbsp;</div>
+    <div style="display:inline-block; width:{{100-value}}px;background-color: {{bar2color}}">&nbsp;</div>
+</div>
+<div ng-hide="value >0 && value <= 100">
+    <span class="label label-danger">Invalid value...</span>
+</div>
