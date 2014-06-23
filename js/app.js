@@ -19,7 +19,7 @@
 	app.directive("progressBar",[ "progressBarConfig", function (progressBarConfig){
 		return {
 			restrict: 'E',
-			templateUrl:"progressBar.html",
+			templateUrl:"./directives/progressBar.html",
 			scope: {value: "=", 
 					bar1color: "=?", 
 					bar2color: "=?"},

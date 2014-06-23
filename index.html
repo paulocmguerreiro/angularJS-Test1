@@ -12,27 +12,37 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
 
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
     
     
   </head>
   <body ng-controller="ListController as prodCtrl">
-    <div class="page-header"><h1>Display a list of products with a custom progress Bar Directive</h1></div>
+    <div class="page-header"><h1>Custom <strong><em>progress-bar</em></strong> Directive</h1></div>
+    <div class="page-header"><h2>Products list...</h2></div>
     <div class="well">
-        <table>
+        <table class="table table-hover">
         	<thead>
-        		<tr class="page-header"><td>&nbsp;</td><td>ID</td><td>Product</td><td>Price</td><td>Stock Availability</td></tr>
+        		<tr class="page-header">
+                    <th>&nbsp;</th>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Stock Availability</th>
+                 </tr>
         	</thead>
-        	<tr ng-repeat="produtcs in prodCtrl.List">
-        		<td class="fa fa-cube">&nbsp;</td>
-                <td>{{produtcs.id}}</td>
-        		<td>{{produtcs.name | uppercase}}</td>
-        		<td>{{produtcs.price | currency:"€"}}</td>
-        		<td><progress-bar value='produtcs.stock'></progress-bar></td>
-        	</tr>
+            <tbody class="table-hover">
+            	<tr ng-repeat="produtcs in prodCtrl.List">
+            		<td class="fa fa-cube">&nbsp;</td>
+                    <td>{{produtcs.id}}</td>
+            		<td>{{produtcs.name | uppercase}}</td>
+            		<td>{{produtcs.price | currency:"€"}}</td>
+            		<td><progress-bar value='produtcs.stock'></progress-bar></td>
+            	</tr>
+            </tbody>
         </table>        
      </div>
-     
+
+     <div class="page-header"><h2>Bind Input ...</h2></div>
      <div class="well">
         <div class="row">
             <div class="col-lg-2">
