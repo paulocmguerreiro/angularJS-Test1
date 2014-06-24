@@ -10,7 +10,6 @@
 	});
 	
 	
-	
 	app.constant("progressBarConfig", {
 											bar1color:'green', 
 											bar2color:"red"
